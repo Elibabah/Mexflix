@@ -9,9 +9,10 @@ let renderingMovie = (movieData) => {
     movieImg.setAttribute("src", movieData.sprites.front.default)
 
     fetch("http://www.omdbapi.com/?t='' + ''" + `${movieParaBuscar}` + "&apikey=cbd9e008")
+        //http: //www.omdbapi.com/?i=tt3896198&apikey=cbd9e008
         .then((respose) => {
             console.log(response)
-            if (response.status == 404) {
+            if (respose.status == 404) {
                 alert("Esa película no existe. Revisa el título")
             } else {
                 respose.json()
