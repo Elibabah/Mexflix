@@ -4,12 +4,12 @@
 
 
 //funtion to be triggered from search button
-let searchPokemon = () => {
+let searchMovie = () => {
     //bring input value
     let searchValue = document.getElementById("searchInput").value
-    getPokemonfromAPI(searchValue)
+    getMoviefromAPI(searchValue)
 }
 
 //bring button to give afunction
 let buttonSearch = document.getElementById("searchButton")
-buttonSearch.addEventListener("click", searchPokemon)
+buttonSearch.addEventListener("click", searchMovie)

@@ -1,8 +1,7 @@
 // ----------------------------- FUNCIONES DE RENDEREADO API -----------------------------------//
 // ------------ OBTENER DATOS  DE LA API Y EXPORTARLOS  PARA USARLOS EN APP.JS ---------------//
 
-
-// Función para renderear películas
+// Crear función para renderear pokemon
 let renderingPokemon = (pokemonData) => {
     let pokemonName = document.getElementById("pokemon-name")
     let pokemonImg = document.getElementById("pokemon-img")
