@@ -3,13 +3,13 @@
 
 
 
-//funtion to be triggered from search button
+// función que se activará desde el botón de búsqueda
 let searchMovie = () => {
-    //bring input value
+    //traer valor de entrada
     let searchValue = document.getElementById("searchInput").value
     getMoviefromAPI(searchValue)
 }
 
-//bring button to give afunction
+//traer botón para darle función
 let buttonSearch = document.getElementById("searchButton")
 buttonSearch.addEventListener("click", searchMovie)
