@@ -2,6 +2,9 @@
 // ------------ OBTENER VALORES DE BÚSQUEDA PARA PROCESARLOS EN APP.JS ----------------- //
 
 
+// Importar películas desde API. Recibe el export de data.js
+import { getMoviefromAPI } from "./data.js";
+
 
 // función que se activará desde el botón de búsqueda
 let searchMovie = () => {
