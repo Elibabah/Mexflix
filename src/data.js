@@ -3,21 +3,25 @@
 
 //Crear función para renderear película
 let renderingMovie = (movieData) => {
+    console.log(movieData)
     let movieName = document.getElementById("movie-name")
     let movieImg = document.getElementById("movie-img")
-    movieName.innerHTML = movieData.name
-    movieImg.setAttribute("src", movieData.sprites.front.default)
+        //ACTIVAR ELEMENTOS
+    movieName.innerHTML = movieData.Title // TRAER TÍTULO DE PELÍCULA
+    movieImg.setAttribute("src", movieData.Poster) // TRAER PÓSTER
+}
 
-    fetch("http://www.omdbapi.com/?t='' + ''" + `${movieParaBuscar}` + "&apikey=cbd9e008")
-        //http: //www.omdbapi.com/?i=tt3896198&apikey=cbd9e008
-        .then((respose) => {
+export let getMoviefromAPI = (movieParaBuscar) => { // SE EXPORTA DESDE API CON getMoviefromAPI que coincide con IMPORTACIÓN
+
+    fetch("http://www.omdbapi.com/?t= '' + ''" + `${movieParaBuscar}` + "&apikey=cbd9e008")
+        .then((response) => { //-----------------------------P R O M E S A 
             console.log(response)
-            if (respose.status == 404) {
-                alert("Esa película no existe. Revisa el título")
+            if (response.status == 404) { //------- RESPUESTA AL ERROR 404
+                alert("Esa película no existe. Por favor, revisa el nombre");
             } else {
-                respose.json()
-                    .then((data) => renderingMovie(data))
-                    .catch((error) => console.log(error))
+                response.json()
+                    .then((data) => renderingMovie(data)) // ----------PROMESA
+                    .catch((error) => console.log(error)) // ----------CANALIZAR ERROR DE BÚSQUEDA
             }
         })
 

@@ -6,6 +6,7 @@
 import { getMoviefromAPI } from "./data.js";
 
 
+
 // función que se activará desde el botón de búsqueda
 let searchMovie = () => {
     //traer valor de entrada
