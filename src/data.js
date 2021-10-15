@@ -9,6 +9,9 @@ let renderingMovie = (movieData) => {
     let movieYear = document.getElementById("movie-year")
     let movieActors = document.getElementById("movie-actors")
     let movieReleased = document.getElementById("movie-released")
+    let movieGenre = document.getElementById("movie-genre")
+    let movieDirector = document.getElementById("movie-director")
+    let movieLanguage = document.getElementById("movie-language")
 
 
     //ACTIVAR LAS VARIABLES (Título, poster, año, actores, director)
@@ -18,6 +21,9 @@ let renderingMovie = (movieData) => {
     movieYear.innerHTML = movieData.Year // TRAER AÑO
     movieActors.innerHTML = movieData.Actors // Traer actores 
     movieReleased.innerHTML = movieData.Released //fecha lanzamiento
+    movieGenre.innerHTML = movieData.Genre // Género
+    movieDirector.innerHTML = movieData.Director //Director
+    movieLanguage.innerHTML = movieData.Language //Lenguage
 }
 
 export let getMoviefromAPI = (movieParaBuscar) => { // SE EXPORTA DESDE API CON getMoviefromAPI que coincide con IMPORTACIÓN
