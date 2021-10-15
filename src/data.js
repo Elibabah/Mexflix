@@ -24,7 +24,7 @@ export let getMoviefromAPI = (movieParaBuscar) => { // SE EXPORTA DESDE API CON 
 
     //P R O M E S A S
 
-    fetch("http://www.omdbapi.com/?t= '' + ''" + `${movieParaBuscar}` + "&apikey=cbd9e008")
+    fetch("https://www.omdbapi.com/?t= '' + ''" + `${movieParaBuscar}` + "&apikey=cbd9e008")
         .then((response) => { //-----------------------------P R O M E S A 
             console.log(response)
             if (response.status == 404) { //------- RESPUESTA A ERROR 404
