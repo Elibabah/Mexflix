@@ -1,5 +1,17 @@
 // ------------------------------------- D O M ------------------------------------------//
 // ------------ OBTENER VALORES DE BÚSQUEDA PARA PROCESARLOS EN APP.JS ----------------- //
+document.getElementById("screen1").hidden = false //Mostrar pantalla 1
+document.getElementById("screen2").hidden = true //Ocultar pantalla 2
+document.getElementById("screen3").hidden = true //Ocultar pantalla 3
+
+// Intentando poner imagen de acceso
+let acceso = document.getElementById("imagen-acceso")
+acceso.addEventListener("click", function() {
+    document.getElementById("screen1").hidden = true
+    document.getElementById("screen2").hidden = false
+})
+
+
 
 
 // Importar películas desde API. Recibe el EXPORT de data.js
