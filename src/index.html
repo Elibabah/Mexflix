@@ -12,18 +12,38 @@
 </head>
 
 <body>
-    <!------------------------------ H E A D E R ----------------------------------->
-    <header>
-        <h1>MEXFLIX</h1>
-        <h2>THE BEST CHILDREN MOVIE FOR YOU</h2>
-    </header>
+    <!--------------------------------- S C R E E N  1------------------------------------------->
+    <!--------------------------------- V I E W P O R T ----------------------------------------->
+    <section id="screen1">
+        <header>
+            <h1>MEXFLIX</h1>
+            <h2>THE BEST CHILDREN MOVIE FOR YOU</h2>
+        </header>
+
+        <image>
+            <a href="#screen2"><img id="imagen-acceso" src="https://cdn-icons-png.flaticon.com/512/62/62891.png"></a>
+        </image>
+    </section>
 
 
-    <!--------------------- B O T O N E S   B Ú S Q U E D A ------------------------->
-    <input id="searchInput">
-    <button id="searchButton">Find movie</button>
+    <section id="screen2">
+        <header>
+            <!-- B O T O N E S   B Ú S Q U E D A-->
+            <input id="searchInput" placeholder="Buscar por título o año">
+            <button id="searchButton">BUSCAR</button>
+            <h2>ENCUENTRA DESDE NUESTRO CATÁLOGO Y DÉJATE CONSENTIR</h2>
+            C A R R U S E L D E P E L Í C U L A S A Q U Í
+        </header>
+    </section>
 
-    <!------------------- AQUÍ VA PÓSTER Y DATOS DE PELÍCULA ENCONTRADA --------------------->
+
+    <section id="screen3">
+        RESULTADOS DE BÚSQUEDA
+    </section>
+
+
+
+    <!-- AQUÍ VA PÓSTER Y DATOS DE PELÍCULA ENCONTRADA -->
     <div>
         <h1 id="movie-name"></h1>
         <h2 id="movie-year"></h2>
@@ -31,8 +51,6 @@
         <h2 id="movie-actors"></h2>
         <img id="movie-img" src="">
     </div>
-
-
 
     <script src="index.js" type="module"></script>
     <script src="app.js"></script>
