@@ -2,8 +2,8 @@
 // ------------ OBTENER VALORES DE BÚSQUEDA PARA PROCESARLOS EN APP.JS ----------------- //
 
 
-// Importar películas desde API. Recibe el export de data.js
-import { getMoviefromAPI } from "./data.js";
+// Importar películas desde API. Recibe el EXPORT de data.js
+import { getMoviefromAPI } from "./data.js"; // "getMoviefromAPI" debe coincidir tannto en IMPORT como en EXPORT
 
 
 
@@ -14,6 +14,6 @@ let searchMovie = () => {
     getMoviefromAPI(searchValue)
 }
 
-//traer botón para darle función
+//traer botón del HTML por ID para darle función
 let buttonSearch = document.getElementById("searchButton")
-buttonSearch.addEventListener("click", searchMovie)
+buttonSearch.addEventListener("click", searchMovie) //Escuchador de evento para que al "click" se enlace a la función
