@@ -13,7 +13,7 @@
 
 <body>
     <!--------------------------------- S C R E E N  1------------------------------------------->
-    <!--------------------------------- V I E W P O R T ----------------------------------------->
+    <!----------------------------------- VIEWPORT ----------------------------------------->
     <section id="screen1">
         <header>
             <h1>MEXFLIX</h1>
@@ -25,38 +25,52 @@
         </image>
     </section>
 
-
+    <!--------------------------------- S C R E E N  2------------------------------------------->
+    <!------------------------------- BUSCADOR Y CATÁLOGO ----------------------------------------->
     <section id="screen2">
         <header>
-            <!-- B O T O N E S   B Ú S Q U E D A-->
-            <input id="searchInput" placeholder="Buscar por título o año">
-            <button id="searchButton">BUSCAR</button>
+
             <h2>ENCUENTRA DESDE NUESTRO CATÁLOGO Y DÉJATE CONSENTIR</h2>
             C A R R U S E L D E P E L Í C U L A S A Q U Í
+
+            <div id="muestra1">
+                <h1 id="nombre"></h1>
+                <h2 id="año"></h2>
+                <h2 id="director"></h2>
+                <img id="poster" src="">
+            </div>
+
+
+
+
         </header>
+
+
+        <!-- B O T O N E S   B Ú S Q U E D A-->
+        <input id="searchInput" placeholder="Buscar por título">
+        <button id="searchButton">BUSCAR</button>
+
+        <!--BOTONES PARA TRAER POR AÑO ---- NO ME SALE :/
+            <input id="searchInputYear" placeholder="Buscar por año">
+        <button id="searchButtonYear">BUSCAR</button>-->
+
+        <!-- PÓSTER Y DATOS DE PELÍCULA ENCONTRADA -->
+        <div>
+            <h1 id="movie-name"></h1>
+            <h2 id="movie-year"></h2>
+            <h2 id="movie-runtime"></h2>
+            <h2 id="movie-released"></h2>
+            <h2 id="movie-actors"></h2>
+            <h2 id="movie-genre"></h2>
+            <h2 id="movie-director"></h2>
+            <h2 id="movie-language"></h2>
+            <img id="movie-img" src="">
+        </div>
+
     </section>
 
-
-    <section id="screen3">
-        RESULTADOS DE BÚSQUEDA
-    </section>
-
-
-
-    <!-- AQUÍ VA PÓSTER Y DATOS DE PELÍCULA ENCONTRADA -->
-    <div>
-        <h1 id="movie-name"></h1>
-        <h2 id="movie-year"></h2>
-        <h2 id="movie-released"></h2>
-        <h2 id="movie-actors"></h2>
-        <h2 id="movie-genre"></h2>
-        <h2 id="movie-director"></h2>
-        <h2 id="movie-language"></h2>
-        <img id="movie-img" src="">
-    </div>
-
-    <script src="index.js" type="module"></script>
     <script src="app.js"></script>
+    <script src="index.js" type="module"></script>
 </body>
 
 </html>
