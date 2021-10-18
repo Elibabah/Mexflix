@@ -1,27 +1,30 @@
 {
-    "name": "mexflix",
-    "version": "1.0.0",
-    "description": "movie cathalogue to find the best children movie.",
-    "main": "index.js",
-    "scripts": {
-        "test": "npm test"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Elibabah/Mexflix.git"
-    },
-    "keywords": [
-        "mexflix",
-        "children",
-        "movie"
-    ],
-    "author": "Elibabah",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Elibabah/Mexflix/issues"
-    },
-    "homepage": "https://github.com/Elibabah/Mexflix#readme",
-    "dependencies": {
-        "markdown-table": "^3.0.1"
-    }
+  "name": "mexflix",
+  "version": "1.0.0",
+  "description": "movie cathalogue to find the best children movie.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elibabah/Mexflix.git"
+  },
+  "keywords": [
+    "mexflix",
+    "children",
+    "movie"
+  ],
+  "author": "Elibabah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Elibabah/Mexflix/issues"
+  },
+  "homepage": "https://github.com/Elibabah/Mexflix#readme",
+  "dependencies": {
+    "markdown-table": "^3.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1"
+  }
 }
