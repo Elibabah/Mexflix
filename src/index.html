@@ -8,12 +8,13 @@
     <title>MEXFLIX</title>
     <meta name="description" content="children movies">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!--------------------------------- S C R E E N  1------------------------------------------->
-    <!----------------------------------- VIEWPORT ----------------------------------------->
+    <!----------------------------------------// S C R E E N  1 //-------------------------------------------->
+    <!------------------------------------------// VIEWPORT //------------------------------------------------>
     <section id="screen1">
         <header>
             <h1>MEXFLIX</h1>
@@ -25,52 +26,41 @@
         </image>
     </section>
 
-    <!--------------------------------- S C R E E N  2------------------------------------------->
-    <!------------------------------- BUSCADOR Y CATÁLOGO ----------------------------------------->
-    <section id="screen2">
-        <header>
+    <!---------------------------------------// S C R E E N  2 //--------------------------------------------->
+    <!------------------------------------// BUSCADOR Y CATÁLOGO //------------------------------------------->
+    <main id="screen2">
 
-            <h2>ENCUENTRA DESDE NUESTRO CATÁLOGO Y DÉJATE CONSENTIR</h2>
-            C A R R U S E L D E P E L Í C U L A S A Q U Í
-
-            <div id="muestra1">
-                <h1 id="nombre"></h1>
-                <h2 id="año"></h2>
-                <h2 id="director"></h2>
-                <img id="poster" src="">
-            </div>
-
-
-
-
-        </header>
-
-
-        <!-- B O T O N E S   B Ú S Q U E D A-->
+        <!---------------------------------- Botones de búsqueda --------------------------------------------->
         <input id="searchInput" placeholder="Buscar por título">
         <button id="searchButton">BUSCAR</button>
 
-        <!--BOTONES PARA TRAER POR AÑO ---- NO ME SALE :/
-            <input id="searchInputYear" placeholder="Buscar por año">
-        <button id="searchButtonYear">BUSCAR</button>-->
-
-        <!-- PÓSTER Y DATOS DE PELÍCULA ENCONTRADA -->
-        <div>
-            <h1 id="movie-name"></h1>
-            <h2 id="movie-year"></h2>
-            <h2 id="movie-runtime"></h2>
-            <h2 id="movie-released"></h2>
-            <h2 id="movie-actors"></h2>
-            <h2 id="movie-genre"></h2>
-            <h2 id="movie-director"></h2>
-            <h2 id="movie-language"></h2>
-            <img id="movie-img" src="">
+        <!-------------------------- Película buscada tuneada con Bootstrap ---------------------------------->
+        <div hidden id="pelischild" class="card" style="width: 18rem;">
+            <img src="" id="movie-img" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title" id="movie-name"></h5>
+                <p class="card-text" id="movie-year"></p>
+                <p class="card-text" id="movie-released"></p>
+                <p class="card-text" id="movie-runtime"></p>
+                <p class="card-text" id="movie-director"></p>
+                <p class="card-text" id="movie-actors"></p>
+                <p class="card-text" id="movie-genre"></p>
+                <p class="card-text" id="movie-language"></p>
+                <a href="#" class="btn btn-primary"></a>
+            </div>
         </div>
+        <hr>
+        <!------------------------------ Donde se imprimirá el catálogo -------------------------------------->
+        <div id="muestra">
+            <h2>ENCUENTRA DESDE NUESTRO CATÁLOGO Y DÉJATE CONSENTIR</h2>
+        </div>
+        <!--------------------------------------- Footer ----------------------------------------------------->
+        <footer></footer>
 
-    </section>
-
-    <script src="app.js"></script>
-    <script src="index.js" type="module"></script>
+    </main>
+    <!--------------------------------------- Enlaces script ------------------------------------------------->
+    <script src="app.js "></script>
+    <script src="index.js " type="module "></script>
 </body>
 
 </html>
