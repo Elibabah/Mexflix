@@ -2,9 +2,13 @@
 // ------------------// OBTENER DATOS  DE LA API Y EXPORTARLOS  PARA USARLOS EN APP.JS //--------------------//
 
 
-//---------------------------------------// B Ú S Q U E D A //-----------------------------------------------//
+//--------------------------------------// B Ú S Q U E D A //-----------------------------------------------//
 
-//Funciones para renderear (obtener) película
+/*let saludar = () => {
+    console.log("hola")
+}
+saludar()*/
+//--------------------------- Funciones para renderear (obtener) película ----------------------------------//
 let renderingMovie = (movieData) => {
     console.log(movieData)
     let movieName = document.getElementById("movie-name")
@@ -18,7 +22,6 @@ let renderingMovie = (movieData) => {
     let movieRuntime = document.getElementById("movie-runtime")
 
     //Activar las variables (título, poster, año, actores, director)
-
     movieName.innerHTML = movieData.Title // Traer título
     movieImg.setAttribute("src", movieData.Poster) // Traer póster
     movieYear.innerHTML = movieData.Year // Traer año
@@ -30,26 +33,27 @@ let renderingMovie = (movieData) => {
     movieRuntime.innerHTML = movieData.Runtime // Traer duración
 }
 
-export let getMoviefromAPI = (movieParaBuscar) => { // Se exporta desde API con getMoviefromAPI que coincide con IMPORTACIÓN
+//--------------- Se exporta desde API con getMoviefromAPI que coincide con IMPORTACIÓN -------------------//
+export let getMoviefromAPI = (movieParaBuscar) => {
 
     // Promesas
 
-    fetch("https://www.omdbapi.com/?t= '' + ''" + `${movieParaBuscar}` + "&apikey=cbd9e008")
+    fetch("https://www.omdbapi.com/?t=" + `${movieParaBuscar}` + "&apikey=cbd9e008")
         .then((response) => { //-----------------------------Promesa 
             console.log(response)
             if (response.status == 404) { //------- Respuesta a Error 404
                 alert("Esa película no existe. Por favor, revisa el nombre");
             } else {
                 response.json()
-                    .then((data) => renderingMovie(data)) // ----------Promesa
-                    .catch((error) => console.log(error)) // ----------Canalizar error de búsqueda
+                    .then((data) => renderingMovie(data)) // Promesa (de la función para renderear declarada arriba)
+                    .catch((error) => console.log(error)) // Canalizar error de búsqueda
             }
         })
         .finally(() => console.log("promesas resueltas")) // -------------Fin de promesas 
 }
 
 
-//----------------------------------------// C A T Á L O G O //----------------------------------------------//
+//----------------------------------------//> C A T Á L O G O <//----------------------------------------------//
 let movieSelection = ["totoro", "ponyo", "inside out"]
 
 // Traer película seleccionada desde API
@@ -61,7 +65,6 @@ for (const item of movieSelection) {
         .then((data) => renderingSelectedMovies(data)) // Renderear película para activarla con let
         .catch((error) => console.log(error)) // Atrapar error
 }
-
 
 // Rendereado de selección de películas
 let renderingSelectedMovies = (data) => {
