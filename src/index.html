@@ -13,10 +13,38 @@
 </head>
 
 <body>
-    <!----------------------------------------// S C R E E N  1 //-------------------------------------------->
-    <!------------------------------------------// VIEWPORT //------------------------------------------------>
 
-    <section id="screen1">
+    <!-------------------------------------- P R E V I E W --------------------------------------------------->
+    <!-- ------------------------------------ A C C E S S ---------------------------------------------------->
+
+
+    <section id="screen0">
+
+        <!--Nombre-->
+        <div class="form-group">
+            <label for="name">Name</label>
+            <br>
+            <input type="text" name="name" id="name1" class="form-control" placeholder="Username" required/>
+        </div>
+        <br>
+
+        <!--Contraseña-->
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="contraseña" id="password" class="acceso" placeholder="Password" required/>
+        </div>
+
+        <!--Botón-->
+        <button id="entry">Entrar</button>
+
+    </section>
+
+
+
+    <!----------------------------------------// S C R E E N  1 //-------------------------------------------->
+    <!----------------------------------------// USERS VIEWPORT //-------------------------------------------->
+
+    <section hidden id="screen1">
         <header>
             <h1>MEXFLIX</h1>
             <h2>THE BEST CHILDREN MOVIE FOR YOU</h2>
@@ -30,7 +58,7 @@
     <!---------------------------------------// S C R E E N  2 //--------------------------------------------->
     <!------------------------------------// BUSCADOR Y CATÁLOGO //------------------------------------------->
 
-    <main id="screen2">
+    <main hidden id="screen2">
 
 
         <!-------------------------------------- Usuario ---------------------------------------------------->
@@ -50,8 +78,8 @@
 
         <div hidden id="pelischild" class="card" style="width: 18rem;">
             <h5 class="card-title" id="movie-name"></h5>
-            <img src="" id="movie-img" class="card-img-top" alt="...">
-            <div class="card-body">
+            <a id="info" href="#info-card"><img src="" id="movie-img" class="card-img-top" alt="poster"></a>
+            <div id="info-card" class="card-body">
                 <p class="card-text" id="movie-year"></p>
                 <p class="card-text" id="movie-released"></p>
                 <p class="card-text" id="movie-runtime"></p>
@@ -60,7 +88,7 @@
                 <p class="card-text" id="movie-genre"></p>
                 <p class="card-text" id="movie-language"></p>
                 <p class="card-text" id="movie-plot"></p>
-                <a href="#" class="btn btn-primary"></a>
+                <!--<button id="uninfo-card" class="btn btn-primary">Hidden</a></button>-->
             </div>
         </div>
         <hr>
@@ -78,8 +106,8 @@
     </main>
     <!--------------------------------------- Enlaces script ------------------------------------------------->
 
-    <!--<script src="app.js"></script>-->
     <script src="index.js" type="module"></script>
+    <script src="app.js"></script>
 
 </body>
 

@@ -7,7 +7,25 @@
 //--------------------------- Funciones para renderear (obtener) película ----------------------------------//
 let renderingMovie = (movieData) => {
     console.log(movieData)
-    let movieName = document.getElementById("movie-name")
+
+    let search = document.getElementById("pelischild")
+    search.innerHTML = ""
+    for (const movie of movieData.Search) {
+        console.log(movie)
+        search.innerHTML +=
+            '<div class="card" style="width: 18rem;">' +
+            '<img src=' + `${movie.Poster}` + " class='card-img-top' alt='sin póster'" + '/>' +
+            '<div class="card-body">' +
+            '<h5 class="card-title">' +
+            `${movie.Title}` + '</h5>' +
+            '<p class= "card-text">' + `${movie.Year}` + '</p>' +
+            '</div>' +
+            '</div>'
+    }
+}
+
+
+/*    let movieName = document.getElementById("movie-name")
     let movieImg = document.getElementById("movie-img")
     let movieYear = document.getElementById("movie-year")
     let movieActors = document.getElementById("movie-actors")
@@ -29,14 +47,14 @@ let renderingMovie = (movieData) => {
     movieLanguage.innerHTML = "<b>Language:</b><br>" + movieData.Language // Traer lenguage
     movieRuntime.innerHTML = "<b>Runtime:</b><br>" + movieData.Runtime // Traer duración
     moviePlot.innerHTML = "<b>Review:</b><br>" + movieData.Plot // Traer reseña
-}
+}*/
 
 //--------------- Se exporta desde API con getMoviefromAPI que coincide con IMPORTACIÓN -------------------//
 export let getMoviefromAPI = (movieParaBuscar) => {
 
     // Promesas
 
-    fetch("https://www.omdbapi.com/?t=" + `${movieParaBuscar}` + "&apikey=cbd9e008")
+    fetch("https://www.omdbapi.com/?s=" + `${movieParaBuscar}` + "&apikey=cbd9e008")
         .then((response) => { //-----------------------------Promesa 
             console.log(response)
             if (response.status == 404) { //------- Respuesta a Error 404
@@ -75,11 +93,11 @@ let renderingSelectedMovies = (data) => {
     let movieSelectionSection = document.getElementById("muestra")
     movieSelectionSection.innerHTML += "<div class='card' style='width: 18rem'>" +
         "<b>" + `${data.Title}` + "</b>" +
-        '<img src=' + `${data.Poster}` + ' class="card-img-top" alt=`${data.name}`/>' +
-        "<div class='card-body'>" +
+        "<a href='#show-tag'>" + '<img src=' + `${data.Poster}` + ' class="card-img-top" alt=`${data.name}`/>' + "</a>" +
+        "<div class='card-body' id='show-tag'>" +
         "<p><b>Year:</b>" + "<br>" + `${data.Year}` + "</p>" +
         "<p><b>Time:</b>" + "<br>" + `${data.Runtime}` + "</p>" +
         "<p><b>Genre:</b>" + "<br>" + `${data.Genre}` + "</p>" +
-        "<p><b>Review:</b>" + "<br>" + `${data.Plot}` + "</p>"
-    "</div>"
+        "<p><b>Review:</b>" + "<br>" + `${data.Plot}` + "</p>" +
+        "</div>"
 }
