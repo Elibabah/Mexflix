@@ -2,12 +2,8 @@
 // ------------------// OBTENER DATOS  DE LA API Y EXPORTARLOS  PARA USARLOS EN APP.JS //--------------------//
 
 
-//--------------------------------------// B Ú S Q U E D A //-----------------------------------------------//
+//-----------------------------------//->  B Ú S Q U E D A  <-//--------------------------------------------//
 
-/*let saludar = () => {
-    console.log("hola")
-}
-saludar()*/
 //--------------------------- Funciones para renderear (obtener) película ----------------------------------//
 let renderingMovie = (movieData) => {
     console.log(movieData)
@@ -20,6 +16,7 @@ let renderingMovie = (movieData) => {
     let movieDirector = document.getElementById("movie-director")
     let movieLanguage = document.getElementById("movie-language")
     let movieRuntime = document.getElementById("movie-runtime")
+    let moviePlot = document.getElementById("movie-plot")
 
     //Activar las variables (título, poster, año, actores, director)
     movieName.innerHTML = movieData.Title // Traer título
@@ -27,10 +24,11 @@ let renderingMovie = (movieData) => {
     movieYear.innerHTML = movieData.Year // Traer año
     movieActors.innerHTML = movieData.Actors // Traer actores 
     movieReleased.innerHTML = movieData.Released // Traer fecha de lanzamiento
-    movieGenre.innerHTML = movieData.Genre // Traer género
+    movieGenre.innerHTML = "Genre: " + movieData.Genre // Traer género
     movieDirector.innerHTML = movieData.Director // Traer director
     movieLanguage.innerHTML = movieData.Language // Traer lenguage
     movieRuntime.innerHTML = movieData.Runtime // Traer duración
+    moviePlot.innerHTML = movieData.Plot // Traer reseña
 }
 
 //--------------- Se exporta desde API con getMoviefromAPI que coincide con IMPORTACIÓN -------------------//
@@ -53,8 +51,10 @@ export let getMoviefromAPI = (movieParaBuscar) => {
 }
 
 
-//----------------------------------------//> C A T Á L O G O <//----------------------------------------------//
-let movieSelection = ["totoro", "ponyo", "inside out"]
+//--------------------------------------//-> C A T Á L O G O <-//--------------------------------------------//
+
+//Array de selección para "Te han gustado:"
+let movieSelection = ["totoro", "ponyo", "inside out", "luca", "paw patrol", "coco", "toy story 3", "moana", "the good dinosaur"]
 
 // Traer película seleccionada desde API
 // Iterar selección // Fetch a la API
@@ -66,10 +66,20 @@ for (const item of movieSelection) {
         .catch((error) => console.log(error)) // Atrapar error
 }
 
+
 // Rendereado de selección de películas
 let renderingSelectedMovies = (data) => {
     console.log(data)
-        // Imprimir en HTML
+
+    // Activar las variables - Imprimir en HTML
     let movieSelectionSection = document.getElementById("muestra")
-    movieSelectionSection.innerHTML += "<div class='card' style='width: 18rem'>" + `${data.Title}` + '<img src=' + `${data.Poster}` + ' class="card-img-top" alt=`${data.name}`/>' + "<div class='card-body'>" + "<h5 class = 'card-title'></h5>" + "<p class = 'card-text'></p>" + "<a href = '#' class = 'btn btn-primary '></a>" + "</div>"
+    movieSelectionSection.innerHTML += "<div class='card' style='width: 18rem'>" +
+        `${data.Title}` +
+        '<img src=' + `${data.Poster}` + ' class="card-img-top" alt=`${data.name}`/>' +
+        "<div class='card-body'>" +
+        `${data.Year}` + '</br>' +
+        `${data.Runtime}` + '</br>' + "<p>Genre: </p>" +
+        `${data.Genre}` + '</br>' + '</br>' +
+        `${data.Plot}` +
+        "</div>"
 }
