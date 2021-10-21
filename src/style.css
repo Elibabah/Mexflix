@@ -1,7 +1,76 @@
+#header-user {
+    background-color: #000;
+    color: #F00;
+}
+
 #imagen-acceso {
     width: 10%;
+    border-radius: 50%;
 }
 
 #imagen-user {
-    width: 7%;
+    width: 5%;
+    border-radius: 50%;
 }
+
+
+/*---------------------------------------- FLEXBOX PELÍCULAS BUSCADOR ---------------------------------------*/
+
+#screen2 {
+    background-color: #2f353b;
+}
+
+.container {
+    display: flex;
+    width: auto;
+    color: #000;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 1%;
+    row-gap: 14px;
+    padding-top: 2%;
+    padding-right: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    border-radius: 50%;
+}
+
+.flex-item {
+    height: auto;
+    font-size: 100%;
+}
+
+.responsive-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/*-------------------------------- F O O T E R ------------------------------------------*/
+
+footer {
+    background-color: #000;
+    color: #FFF;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+
+#date_footer {
+    font-size: 15px;
+}
+
+
+/*#icons {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+}
+
+#icons ul {
+    font-size: 10px;
+}*/

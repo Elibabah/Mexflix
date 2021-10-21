@@ -31,6 +31,7 @@
         <!--Contraseña-->
         <div class="form-group">
             <label for="password">Password</label>
+            <br>
             <input type="password" name="contraseña" id="password" class="acceso" placeholder="Password" required/>
         </div>
 
@@ -63,45 +64,56 @@
 
         <!-------------------------------------- Usuario ---------------------------------------------------->
 
-        <h2>M E X F L I X</h2>
-        <h3>FOR CHILDREN</h3>
-        <image>
-            <img id="imagen-user" src="https://cdn-icons-png.flaticon.com/512/62/62891.png">
-        </image>
+        <header id="header-user">
+            <h2>M E X F L I X</h2>
+            <h3>FOR CHILDREN</h3>
+
+            <image>
+                <img id="imagen-user" src="/assets/girl.png">
+            </image>
+        </header>
+        <br>
 
         <!---------------------------------- Botones de búsqueda --------------------------------------------->
 
         <input id="searchInput" placeholder="Find for title">
         <button id="searchButton">BUSCAR</button>
 
-        <!-------------------------- Película buscada tuneada con Bootstrap ---------------------------------->
+        <!----------------------- Película buscada que donde se imprime desde data.js ------------------------------>
 
-        <div hidden id="pelischild" class="card" style="width: 18rem;">
-            <h5 class="card-title" id="movie-name"></h5>
-            <a id="info" href="#info-card"><img src="" id="movie-img" class="card-img-top" alt="poster"></a>
-            <div id="info-card" class="card-body">
-                <p class="card-text" id="movie-year"></p>
-                <p class="card-text" id="movie-released"></p>
-                <p class="card-text" id="movie-runtime"></p>
-                <p class="card-text" id="movie-director"></p>
-                <p class="card-text" id="movie-actors"></p>
-                <p class="card-text" id="movie-genre"></p>
-                <p class="card-text" id="movie-language"></p>
-                <p class="card-text" id="movie-plot"></p>
-                <!--<button id="uninfo-card" class="btn btn-primary">Hidden</a></button>-->
-            </div>
+        <div hidden class="container" id="pelischild" class="card">
         </div>
+        <hr>
         <hr>
 
         <!------------------------------ Donde se imprimirá el catálogo -------------------------------------->
 
-        <div id="muestra">
-            <h2>FIND FROM OUR CATALOG AND LET YOURSELF BE CONSENT</h2>
+        <h2>FIND FROM OUR CATALOG AND LET YOURSELF BE CONSENT</h2>
+        <section>
             <h3>Movies you liked</h3>
-        </div>
+            <div class="container" id="muestra-modal"></div>
+        </section>
         <!--------------------------------------- Footer ----------------------------------------------------->
 
-        <footer></footer>
+        <footer>Made<br>by Elibabah!<br>
+            <div id="icons">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Elibabah" target="_blank"><img src="assets/github_icon.png" alt="github"></a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/in/david-el%C3%ADas-hern%C3%A1ndez-morales-5b85b5100/" target="_blank"><img src="assets/linkedin.png" alt="linkedin"></a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.instagram.com/delias16.hernandez/" target="_blank"><img src="assets/Instagram.png" alt="instagram"></a>
+                    </li>
+                </ul>
+            </div>
+            <element id="date_footer">September 2021</element>
+
+        </footer>
 
     </main>
     <!--------------------------------------- Enlaces script ------------------------------------------------->

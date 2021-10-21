@@ -1,29 +1,21 @@
 // ------------------------------------------// D O M //--------------------------------------------//
 // -------------------// OBTENER VALORES DE BÚSQUEDA PARA PROCESARLOS EN APP.JS //----------------- //
 
-// ------------------------------------------ PANTALLAS -------------------------------------------//
-//document.getElementById("screen0").hidden = false // Monstrar pantalla 0 (Acceso)
-//document.getElementById("screen1").hidden = false // Mostrar pantalla 1 (Usuario)
-//document.getElementById("screen2").hidden = true // Ocultar pantalla 2 (Producto)
-
 
 // --------------------------------------- ACCESO CUENTA ----------------------------------------- //
+
 let validacion = document.getElementById("entry")
 validacion.addEventListener("click", function() {
-    alert("función de validación prendida")
     let user = document.getElementById("name1").value
     let contraseña = document.getElementById("password").value
-    console.log(user, contraseña)
     if (user == "o" && contraseña == 1) {
-        alert("usuario correcto")
         document.getElementById("screen0").hidden = true // Ocultar pantalla 0
         document.getElementById("screen1").hidden = false // Ocultar pantalla 1
         document.getElementById("screen2").hidden = true // Mostrar pantalla 2
     } else {
-        alert("NO")
+        alert("Account not found")
     }
 })
-
 
 // --------------------------------------- ACCESO USUARIO ----------------------------------------- //
 let acceso = document.getElementById("imagen-acceso")
