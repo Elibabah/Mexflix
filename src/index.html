@@ -15,6 +15,7 @@
 <body>
     <!----------------------------------------// S C R E E N  1 //-------------------------------------------->
     <!------------------------------------------// VIEWPORT //------------------------------------------------>
+
     <section id="screen1">
         <header>
             <h1>MEXFLIX</h1>
@@ -28,17 +29,29 @@
 
     <!---------------------------------------// S C R E E N  2 //--------------------------------------------->
     <!------------------------------------// BUSCADOR Y CATÁLOGO //------------------------------------------->
+
     <main id="screen2">
 
+
+        <!-------------------------------------- Usuario ---------------------------------------------------->
+
+        <h2>M E X F L I X</h2>
+        <h3>FOR CHILDREN</h3>
+        <image>
+            <img id="imagen-user" src="https://cdn-icons-png.flaticon.com/512/62/62891.png">
+        </image>
+
         <!---------------------------------- Botones de búsqueda --------------------------------------------->
-        <input id="searchInput" placeholder="Buscar por título">
+
+        <input id="searchInput" placeholder="Find for title">
         <button id="searchButton">BUSCAR</button>
 
         <!-------------------------- Película buscada tuneada con Bootstrap ---------------------------------->
+
         <div hidden id="pelischild" class="card" style="width: 18rem;">
+            <h5 class="card-title" id="movie-name"></h5>
             <img src="" id="movie-img" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title" id="movie-name"></h5>
                 <p class="card-text" id="movie-year"></p>
                 <p class="card-text" id="movie-released"></p>
                 <p class="card-text" id="movie-runtime"></p>
@@ -51,16 +64,21 @@
             </div>
         </div>
         <hr>
+
         <!------------------------------ Donde se imprimirá el catálogo -------------------------------------->
+
         <div id="muestra">
-            <h2>ENCUENTRA DESDE NUESTRO CATÁLOGO Y DÉJATE CONSENTIR</h2>
+            <h2>FIND FROM OUR CATALOG AND LET YOURSELF BE CONSENT</h2>
+            <h3>Movies you liked</h3>
         </div>
         <!--------------------------------------- Footer ----------------------------------------------------->
+
         <footer></footer>
 
     </main>
     <!--------------------------------------- Enlaces script ------------------------------------------------->
-    <script src="app.js"></script>
+
+    <!--<script src="app.js"></script>-->
     <script src="index.js" type="module"></script>
 
 </body>

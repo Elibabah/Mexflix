@@ -21,14 +21,14 @@ let renderingMovie = (movieData) => {
     //Activar las variables (título, poster, año, actores, director)
     movieName.innerHTML = movieData.Title // Traer título
     movieImg.setAttribute("src", movieData.Poster) // Traer póster
-    movieYear.innerHTML = movieData.Year // Traer año
-    movieActors.innerHTML = movieData.Actors // Traer actores 
-    movieReleased.innerHTML = movieData.Released // Traer fecha de lanzamiento
-    movieGenre.innerHTML = "Genre: " + movieData.Genre // Traer género
-    movieDirector.innerHTML = movieData.Director // Traer director
-    movieLanguage.innerHTML = movieData.Language // Traer lenguage
-    movieRuntime.innerHTML = movieData.Runtime // Traer duración
-    moviePlot.innerHTML = movieData.Plot // Traer reseña
+    movieYear.innerHTML = "<b>Year:</b><br>" + movieData.Year // Traer año
+    movieActors.innerHTML = "<b>Actors:</b><br>" + movieData.Actors // Traer actores 
+    movieReleased.innerHTML = "<b>Released:</b><br>" + movieData.Released // Traer fecha de lanzamiento
+    movieGenre.innerHTML = "<b>Genre:</b><br>" + movieData.Genre // Traer género
+    movieDirector.innerHTML = "<b>Director:</b><br>" + movieData.Director // Traer director
+    movieLanguage.innerHTML = "<b>Language:</b><br>" + movieData.Language // Traer lenguage
+    movieRuntime.innerHTML = "<b>Runtime:</b><br>" + movieData.Runtime // Traer duración
+    moviePlot.innerHTML = "<b>Review:</b><br>" + movieData.Plot // Traer reseña
 }
 
 //--------------- Se exporta desde API con getMoviefromAPI que coincide con IMPORTACIÓN -------------------//
@@ -74,12 +74,12 @@ let renderingSelectedMovies = (data) => {
     // Activar las variables - Imprimir en HTML
     let movieSelectionSection = document.getElementById("muestra")
     movieSelectionSection.innerHTML += "<div class='card' style='width: 18rem'>" +
-        `${data.Title}` +
+        "<b>" + `${data.Title}` + "</b>" +
         '<img src=' + `${data.Poster}` + ' class="card-img-top" alt=`${data.name}`/>' +
         "<div class='card-body'>" +
-        `${data.Year}` + '</br>' +
-        `${data.Runtime}` + '</br>' + "<p>Genre: </p>" +
-        `${data.Genre}` + '</br>' + '</br>' +
-        `${data.Plot}` +
-        "</div>"
+        "<p><b>Year:</b>" + "<br>" + `${data.Year}` + "</p>" +
+        "<p><b>Time:</b>" + "<br>" + `${data.Runtime}` + "</p>" +
+        "<p><b>Genre:</b>" + "<br>" + `${data.Genre}` + "</p>" +
+        "<p><b>Review:</b>" + "<br>" + `${data.Plot}` + "</p>"
+    "</div>"
 }
