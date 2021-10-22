@@ -21,7 +21,7 @@
 
     <section id="screen0">
         <image>
-            <img src="/assets/mexflix-logo.jpg" id="logo-page">
+            <img src="https://raw.githubusercontent.com/Elibabah/Mexflix/development/assets/mexflix-logo.jpg" id="logo-page">
         </image>
         <!--Nombre-->
         <div class="form-group">
@@ -54,7 +54,7 @@
         </header>
 
         <image>
-            <a href="#screen2"><img id="imagen-acceso" src="/assets/girl.png"></a>
+            <a href="#screen2"><img id="imagen-acceso" src="https://raw.githubusercontent.com/Elibabah/Mexflix/development/assets/girl.png"></a>
         </image>
     </section>
 
@@ -67,20 +67,21 @@
         <!-------------------------------------- Usuario ---------------------------------------------------->
 
         <header id="header-user1">
-            <h2>M E X F L I X</h2>
-            <h3>FOR CHILDREN</h3>
-
+            <h2 id="title">M E X F L I X</h2>
+            <h3 id="subtitle">FOR CHILDREN</h3>
             <image>
-                <img id="imagen-user" src="/assets/girl.png">
+                <img id="imagen-user" src="https://raw.githubusercontent.com/Elibabah/Mexflix/development/assets/girl.png">
             </image>
         </header>
         <br>
 
         <!---------------------------------- Botones de búsqueda --------------------------------------------->
 
+
         <input id="searchInput" placeholder="Find for title">
         <button id="searchButton">SEARCH</button>
 
+        <br>
         <!----------------------- Película buscada que donde se imprime desde data.js ------------------------------>
 
         <div hidden class="container" id="pelischild" class="card">
@@ -90,9 +91,9 @@
 
         <!------------------------------ Donde se imprimirá el catálogo -------------------------------------->
 
-        <h2>FIND FROM OUR CATALOG AND LET YOURSELF BE CONSENT</h2>
+        <h2 id="welcome">FIND FROM OUR CATALOG AND LET YOURSELF BE CONSENT</h2>
         <section>
-            <h3>Movies you liked</h3>
+            <h3 id="catalogue-1">Movies you liked</h3>
             <div class="container" id="muestra-modal"></div>
         </section>
         <!--------------------------------------- Footer ----------------------------------------------------->

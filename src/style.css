@@ -55,17 +55,50 @@
 
 /*-------------------------------------------- USER 1 SCREEN 2 ---------------------------------------------*/
 
+#screen2 {
+    background-color: #000080;
+}
+
 #imagen-user {
     width: 5%;
     border-radius: 50%;
+    display: block;
+    float: right;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+
+#header-user1 {
+    color: #8B0000;
+    text-align: center;
+}
+
+#title {
+    padding-top: 2%;
+    font-size: 350%;
+}
+
+#subtitle {
+    font-size: 250%;
+}
+
+#searchInput {
+    margin-left: 2%;
+}
+
+#welcome {
+    color: #FFF;
+    text-align: center;
+}
+
+#catalogue-1 {
+    color: #D3D3D3;
+    margin-top: 3%;
+    margin-left: 5%;
 }
 
 
 /*---------------------------------------- FLEXBOX PELÍCULAS BUSCADOR ---------------------------------------*/
-
-#screen2 {
-    background-color: #2f353b;
-}
 
 .container {
     display: flex;
