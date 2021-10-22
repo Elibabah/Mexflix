@@ -1,12 +1,59 @@
-#header-user {
+/*--------------------------------------- PREVIEW ACCESS SCREEN 0 -----------------------------------------*/
+
+#screen0 {
     background-color: #000;
-    color: #F00;
+    color: aliceblue;
+    height: 100vh;
+    width: auto;
+}
+
+#logo-page {
+    display: block;
+    margin: auto;
+    width: 10%;
+    padding-top: 4%;
+}
+
+.form-group {
+    display: block;
+    margin: auto;
+    width: 35%;
+    max-height: 50%;
+    align-items: center;
+    padding-top: 3%;
+    font-size: 90%;
+}
+
+#entry {
+    display: block;
+    float: right;
+}
+
+
+/*------------------------------------------- USERS SCREEN 1 -----------------------------------------------*/
+
+#screen1 {
+    background-color: #000;
+    height: 100vh;
+    width: auto;
+    color: #8B0000;
+}
+
+#header-user {
+    text-align: center;
+    padding-top: 8%;
 }
 
 #imagen-acceso {
-    width: 10%;
+    padding-top: 7%;
+    width: 8%;
     border-radius: 50%;
+    display: block;
+    margin: auto;
 }
+
+
+/*-------------------------------------------- USER 1 SCREEN 2 ---------------------------------------------*/
 
 #imagen-user {
     width: 5%;
@@ -50,27 +97,22 @@
 /*-------------------------------- F O O T E R ------------------------------------------*/
 
 footer {
-    background-color: #000;
-    color: #FFF;
-    padding: 10px;
+    width: 100%;
+    background: #000000;
+    background-size: cover;
+    position: relative;
+    color: linen;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 30px;
+    padding-bottom: 1%;
+    display: block;
+    margin: auto;
+    font-size: 14px;
 }
 
-#date_footer {
-    font-size: 15px;
-}
-
-
-/*#icons {
-    display: flex;
-    flex-wrap: wrap;
+#social {
     list-style-type: none;
     justify-content: center;
+    font-size: 13px;
+    line-height: 135%;
+    margin-top: 1%;
 }
-
-#icons ul {
-    font-size: 10px;
-}*/

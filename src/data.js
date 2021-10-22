@@ -30,7 +30,7 @@ export let getMoviefromAPI = (movieParaBuscar) => {
 
     // Promesas
 
-    fetch("https://www.omdbapi.com/?s=" + `${movieParaBuscar}` + "&apikey=cbd9e008")
+    fetch("https://www.omdbapi.com/?s=" + `${movieParaBuscar}` + "&apikey=cbd9e008") // fetch (ir a buscar)
         .then((response) => { //-----------------------------Promesa 
             console.log(response)
             if (response.status == 404 || response.status == 401) { //------- Respuesta a Error 404 o 401
