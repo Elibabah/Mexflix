@@ -1,47 +1,78 @@
-// ----------------------------- FUNCIONES DE RENDEREADO API -----------------------------------//
-// ------------ OBTENER DATOS  DE LA API Y EXPORTARLOS  PARA USARLOS EN APP.JS ---------------//
+// ---------------------------------// FUNCIONES DE RENDEREADO API //----------------------------------------//
+// ------------------// OBTENER DATOS  DE LA API Y EXPORTARLOS  PARA USARLOS EN APP.JS //--------------------//
 
-//Funciones para renderear (obtener) película
+
+//-----------------------------------//->  B Ú S Q U E D A  <-//--------------------------------------------//
+
+//--------------------------- Funciones para renderear (obtener) película ----------------------------------//
 let renderingMovie = (movieData) => {
-    console.log(movieData)
-    let movieName = document.getElementById("movie-name")
-    let movieImg = document.getElementById("movie-img")
-    let movieYear = document.getElementById("movie-year")
-    let movieActors = document.getElementById("movie-actors")
-    let movieReleased = document.getElementById("movie-released")
-    let movieGenre = document.getElementById("movie-genre")
-    let movieDirector = document.getElementById("movie-director")
-    let movieLanguage = document.getElementById("movie-language")
-
-
-    //ACTIVAR LAS VARIABLES (Título, poster, año, actores, director)
-
-    movieName.innerHTML = movieData.Title // TRAER TÍTULO DE PELÍCULA
-    movieImg.setAttribute("src", movieData.Poster) // TRAER PÓSTER
-    movieYear.innerHTML = movieData.Year // TRAER AÑO
-    movieActors.innerHTML = movieData.Actors // Traer actores 
-    movieReleased.innerHTML = movieData.Released //fecha lanzamiento
-    movieGenre.innerHTML = movieData.Genre // Género
-    movieDirector.innerHTML = movieData.Director //Director
-    movieLanguage.innerHTML = movieData.Language //Lenguage
+    if (movieData.Response == "False") { //-------------------Película no encontrada Status 200
+        alert("Esa película no se encuentra.")
+    } else {
+        let search = document.getElementById("pelischild")
+        search.innerHTML = ""
+        for (const movie of movieData.Search) {
+            console.log(movie)
+            search.innerHTML +=
+                '<div class="card" style="width: 13rem;">' +
+                '<img class="responsive-image" src=' + `${movie.Poster}` + " class='card-img-top' alt='sin póster'" + '/>' +
+                '<div class="card-body">' +
+                '<h5 class= "flex-item" class= "card-title">' + `${movie.Title}` + '</h5>' +
+                '<p class="card-text">' + `${movie.Year}` + '</p>' +
+                '</div>' + "<br>" +
+                '</div>'
+        }
+    }
 }
 
-export let getMoviefromAPI = (movieParaBuscar) => { // SE EXPORTA DESDE API CON getMoviefromAPI que coincide con IMPORTACIÓN
+//--------------- Se exporta desde API con getMoviefromAPI que coincide con IMPORTACIÓN -------------------//
+export let getMoviefromAPI = (movieParaBuscar) => {
 
-    //P R O M E S A S
+    // Promesas
 
-    fetch("https://www.omdbapi.com/?t= '' + ''" + `${movieParaBuscar}` + "&apikey=cbd9e008")
-        .then((response) => { //-----------------------------P R O M E S A 
+    fetch("https://www.omdbapi.com/?s=" + `${movieParaBuscar}` + "&apikey=cbd9e008") // fetch (ir a buscar)
+        .then((response) => { //-----------------------------Promesa 
             console.log(response)
-            if (response.status == 404) { //------- RESPUESTA A ERROR 404
-                alert("Esa película no existe. Por favor, revisa el nombre");
+            if (response.status == 404 || response.status == 401) { //------- Respuesta a Error 404 o 401
+                alert("No Encontrado o No Autorizado");
             } else {
                 response.json()
-                    .then((data) => renderingMovie(data)) // ----------PROMESA
-                    .catch((error) => console.log(error)) // ----------CANALIZAR ERROR DE BÚSQUEDA
+                    .then((data) => renderingMovie(data)) // Promesa (de la función para renderear declarada arriba)
+                    .catch((error) => console.log(error)) // Canalizar error de búsqueda
             }
         })
+        .finally(() => console.log("promesas resueltas")) // -------------Fin de promesas 
+}
 
-    .finally(() => console.log("promesas resueltas")) // -------------FIN DE PROMESAS 
 
+//--------------------------------------//-> C A T Á L O G O <-//--------------------------------------------//
+
+//Array de selección para "Te han gustado:"
+let movieSelection = ["totoro", "ponyo", "inside out", "luca", "paw patrol", "coco", "toy story 3", "moana", "the good dinosaur", "playmobil"]
+
+// Traer película seleccionada desde API
+// Iterar selección // Fetch a la API
+for (const item of movieSelection) {
+    console.log(item)
+    fetch("https://www.omdbapi.com/?t=" + item + "&apikey=cbd9e008") // Fetch para traer película
+        .then((response) => response.json()) // Traer película con json como objeto
+        .then((data) => renderingSelectedMovies(data)) // Renderear película para activarla con let
+        .catch((error) => console.log(error)) // Atrapar error
+}
+
+
+// Rendereado de selección de películas
+let renderingSelectedMovies = (data) => {
+    console.log(data)
+        // Activar las variables - Imprimir en HTML
+    let movieSelectionSection = document.getElementById("muestra-modal")
+    movieSelectionSection.innerHTML += "<div class='card' style='width: 13rem'>" +
+        "<b>" + `${data.Title}` + "</b>" +
+        "<a>" + '<img src=' + `${data.Poster}` + ' class="card-img-top" alt=`${data.name}`/>' + "</a>" +
+        "<div class='card-body'>" +
+        "<p><b>Year:</b>" + "<br>" + `${data.Year}` + "</p>" +
+        "<p><b>Time:</b>" + "<br>" + `${data.Runtime}` + "</p>" +
+        "<p><b>Genre:</b>" + "<br>" + `${data.Genre}` + "</p>" +
+        "<p><b>Review:</b>" + "<br>" + `${data.Plot}` + "</p>" +
+        "</div>"
 }

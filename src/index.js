@@ -1,31 +1,46 @@
-// ------------------------------------- D O M ------------------------------------------//
-// ------------ OBTENER VALORES DE BÚSQUEDA PARA PROCESARLOS EN APP.JS ----------------- //
-document.getElementById("screen1").hidden = false //Mostrar pantalla 1
-document.getElementById("screen2").hidden = true //Ocultar pantalla 2
-document.getElementById("screen3").hidden = true //Ocultar pantalla 3
+// ------------------------------------------// D O M //--------------------------------------------//
+// -------------------// OBTENER VALORES DE BÚSQUEDA PARA PROCESARLOS EN APP.JS //----------------- //
 
-// Intentando poner imagen de acceso
-let acceso = document.getElementById("imagen-acceso")
-acceso.addEventListener("click", function() {
-    document.getElementById("screen1").hidden = true
-    document.getElementById("screen2").hidden = false
+
+// --------------------------------------- ACCESO CUENTA ----------------------------------------- //
+
+let validacion = document.getElementById("entry")
+validacion.addEventListener("click", function() {
+    let user = document.getElementById("name1").value
+    let contraseña = document.getElementById("password").value
+    if (user == "o" && contraseña == 1) {
+        document.getElementById("screen0").hidden = true // Ocultar pantalla 0
+        document.getElementById("screen1").hidden = false // Ocultar pantalla 1
+        document.getElementById("screen2").hidden = true // Mostrar pantalla 2
+    } else {
+        alert("Account not found")
+    }
 })
 
+// --------------------------------------- ACCESO USUARIO ----------------------------------------- //
+let acceso = document.getElementById("imagen-acceso")
+acceso.addEventListener("click", function() {
+    document.getElementById("screen0").hidden = true // Ocultar pantalla 0
+    document.getElementById("screen1").hidden = true // Ocultar pantalla 1
+    document.getElementById("screen2").hidden = false // Mostrar pantalla 2
+})
 
-
+//--------------------------------------- TRAER POR TÍTULO -----------------------------------------//
 
 // Importar películas desde API. Recibe el EXPORT de data.js
-import { getMoviefromAPI } from "./data.js"; // "getMoviefromAPI" debe coincidir tannto en IMPORT como en EXPORT
+import { getMoviefromAPI } from "./data.js"; // "getMoviefromAPI" debe coincidir tanto en IMPORT como en EXPORT
 
+//--------------------------------------- Botones funciones ----------------------------------------//
 
-
-// función que se activará desde el botón de búsqueda
+// Función que se activa desde el botón de búsqueda
 let searchMovie = () => {
     //traer valor de entrada
     let searchValue = document.getElementById("searchInput").value
     getMoviefromAPI(searchValue)
+    let movieCard = document.getElementById("pelischild")
+    movieCard.hidden = false
 }
 
-//traer botón del HTML por ID para darle función
+//Traer botón del HTML por ID para darle función
 let buttonSearch = document.getElementById("searchButton")
-buttonSearch.addEventListener("click", searchMovie) //Escuchador de evento para que al "click" se enlace a la función
+buttonSearch.addEventListener("click", searchMovie) //Escuchador de evento para que al click se enlace a función

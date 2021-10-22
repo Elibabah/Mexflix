@@ -1,3 +1,188 @@
-#imagen-acceso {
-    width: 10px;
+/*--------------------------------------- PREVIEW ACCESS SCREEN 0 -----------------------------------------*/
+
+#screen0 {
+    background-image: url(https://www.fimth.com/wp-content/uploads/VN-vi-20210222-popsignuptwoweeks-perspective_alpha_website_medium-1.jpg);
+    background-color: #000;
+    color: linen;
+    min-height: 100vh;
+    width: auto;
 }
+
+#screen0::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.7;
+}
+
+#screen0 * {
+    position: relative;
+    z-index: 1;
+}
+
+#logo-page {
+    display: block;
+    margin: auto;
+    width: 10%;
+    padding-top: 2.5%;
+}
+
+.form-group {
+    display: block;
+    margin: auto;
+    width: 35%;
+    max-height: 50%;
+    align-items: center;
+    padding-top: 1%;
+    font-size: 90%;
+}
+
+#entry {
+    display: block;
+    float: right;
+}
+
+
+/*------------------------------------------- USERS SCREEN 1 -----------------------------------------------*/
+
+#screen1 {
+    background-image: url(https://raw.githubusercontent.com/Elibabah/Mexflix/development/assets/back.jpg);
+    height: 100vh;
+    width: auto;
+    color: #f00;
+}
+
+#screen1::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.8;
+}
+
+#screen1 * {
+    position: relative;
+    z-index: 1;
+}
+
+#header-user {
+    text-align: center;
+    padding-top: 8%;
+}
+
+#imagen-acceso {
+    padding-top: 7%;
+    width: 8%;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+
+/*-------------------------------------------- USER 1 SCREEN 2 ---------------------------------------------*/
+
+#screen2 {
+    background-color: #03034e;
+}
+
+#imagen-user {
+    width: 5%;
+    border-radius: 50%;
+    display: block;
+    float: right;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+
+#header-user1 {
+    color: #8B0000;
+    text-align: center;
+}
+
+#title {
+    padding-top: 2%;
+    font-size: 350%;
+}
+
+#subtitle {
+    font-size: 250%;
+}
+
+#searchInput {
+    margin-left: 2%;
+}
+
+#welcome {
+    color: #FFF;
+    text-align: center;
+}
+
+#catalogue-1 {
+    color: #D3D3D3;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+
+/*---------------------------------------- FLEXBOX PELÍCULAS BUSCADOR ---------------------------------------*/
+
+.container {
+    display: flex;
+    width: auto;
+    color: #000;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 1%;
+    row-gap: 14px;
+    padding-top: 2%;
+    padding-right: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    border-radius: 50%;
+}
+
+.flex-item {
+    height: auto;
+    font-size: 100%;
+}
+
+.responsive-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/*-------------------------------- F O O T E R ------------------------------------------*/
+
+footer {
+    width: 100%;
+    background: #000000;
+    background-size: cover;
+    position: relative;
+    color: linen;
+    text-align: center;
+    padding-bottom: 1%;
+    display: block;
+    margin: auto;
+    font-size: 100%;
+    padding-top: 1%;
+}
+
+
+/*
+#social a i {
+    list-style-type: none;
+    justify-content: center;
+    font-size: 100%;
+    line-height: 135%;
+    margin-top: 1%;
+}*/
