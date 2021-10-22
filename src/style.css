@@ -1,17 +1,35 @@
 /*--------------------------------------- PREVIEW ACCESS SCREEN 0 -----------------------------------------*/
 
 #screen0 {
+    background-image: url(https://www.fimth.com/wp-content/uploads/VN-vi-20210222-popsignuptwoweeks-perspective_alpha_website_medium-1.jpg);
     background-color: #000;
     color: linen;
-    height: 100vh;
+    min-height: 100vh;
     width: auto;
+}
+
+#screen0::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.7;
+}
+
+#screen0 * {
+    position: relative;
+    z-index: 1;
 }
 
 #logo-page {
     display: block;
     margin: auto;
     width: 10%;
-    padding-top: 4%;
+    padding-top: 2.5%;
 }
 
 .form-group {
@@ -20,7 +38,7 @@
     width: 35%;
     max-height: 50%;
     align-items: center;
-    padding-top: 3%;
+    padding-top: 1%;
     font-size: 90%;
 }
 
@@ -33,10 +51,26 @@
 /*------------------------------------------- USERS SCREEN 1 -----------------------------------------------*/
 
 #screen1 {
-    background-color: #000;
+    background-image: url(https://raw.githubusercontent.com/Elibabah/Mexflix/development/assets/back.jpg);
     height: 100vh;
     width: auto;
-    color: #8B0000;
+    color: #f00;
+}
+
+#screen1::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.8;
+}
+
+#screen1 * {
+    position: relative;
+    z-index: 1;
 }
 
 #header-user {
@@ -56,7 +90,7 @@
 /*-------------------------------------------- USER 1 SCREEN 2 ---------------------------------------------*/
 
 #screen2 {
-    background-color: #000080;
+    background-color: #03034e;
 }
 
 #imagen-user {
