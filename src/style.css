@@ -29,7 +29,7 @@
     display: block;
     margin: auto;
     width: 10%;
-    padding-top: 1%;
+    padding-top: 0.5%;
 }
 
 .form-group {
@@ -45,6 +45,7 @@
 #entry {
     display: block;
     float: right;
+    border-radius: 15%;
 }
 
 
@@ -90,12 +91,40 @@
 
 /*-------------------------------------------- USER 1 SCREEN 2 ---------------------------------------------*/
 
-#screen2 {
-    background-color: #03034e;
+main {
+    background-color: #000;
+    color: #FFF;
+}
+
+#header-user1 {
+    background-image: url(https://raw.githubusercontent.com/Elibabah/Mexflix/development/assets/back.jpg);
+    background-color: #000;
+    color: linen;
+    width: auto;
+    height: 75vh;
+    color: #F00;
+    text-align: center;
+}
+
+#header-user1::after {
+    content: "";
+    background-color: black;
+    height: 75vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.7;
+}
+
+#header-user1 * {
+    position: relative;
+    z-index: 1;
 }
 
 #imagen-user {
-    width: 5%;
+    width: 8%;
     border-radius: 50%;
     display: block;
     float: right;
@@ -103,32 +132,38 @@
     margin-right: 2%;
 }
 
-#header-user1 {
-    color: #8B0000;
-    text-align: center;
-}
-
 #title {
-    padding-top: 2%;
-    font-size: 350%;
+    padding-top: 5%;
+    font-size: 550%;
 }
 
 #subtitle {
-    font-size: 250%;
+    font-size: 270%;
 }
 
 #searchInput {
-    margin-left: 2%;
+    margin-top: 2%;
+    margin-left: 5%;
+    display: block;
+    float: left;
+}
+
+#searchButton {
+    margin-top: 2%;
+    display: block;
+    float: left;
+    border-radius: 10%;
 }
 
 #welcome {
+    padding-top: 3.5%;
     color: #FFF;
     text-align: center;
 }
 
 #catalogue-1 {
     color: #D3D3D3;
-    margin-top: 3%;
+    margin-top: 3.5%;
     margin-left: 5%;
 }
 
