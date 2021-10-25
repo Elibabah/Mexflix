@@ -4,7 +4,7 @@
     background-image: url(https://www.fimth.com/wp-content/uploads/VN-vi-20210222-popsignuptwoweeks-perspective_alpha_website_medium-1.jpg);
     background-color: #000;
     color: linen;
-    min-height: 100vh;
+    height: 100vh;
     width: auto;
 }
 
@@ -29,7 +29,7 @@
     display: block;
     margin: auto;
     width: 10%;
-    padding-top: 2.5%;
+    padding-top: 0.5%;
 }
 
 .form-group {
@@ -45,6 +45,7 @@
 #entry {
     display: block;
     float: right;
+    border-radius: 15%;
 }
 
 
@@ -75,11 +76,20 @@
 
 #header-user {
     text-align: center;
-    padding-top: 8%;
+    padding-top: 6%;
+}
+
+#title-1 {
+    font-size: 550%;
+}
+
+#subtitle-1 {
+    font-size: 260%;
 }
 
 #imagen-acceso {
-    padding-top: 7%;
+    padding-top: 4%;
+    padding-bottom: 3%;
     width: 8%;
     border-radius: 50%;
     display: block;
@@ -89,12 +99,40 @@
 
 /*-------------------------------------------- USER 1 SCREEN 2 ---------------------------------------------*/
 
-#screen2 {
-    background-color: #03034e;
+main {
+    background-color: #000;
+    color: #FFF;
+}
+
+#header-user1 {
+    background-image: url(https://raw.githubusercontent.com/Elibabah/Mexflix/development/assets/back.jpg);
+    background-color: #000;
+    color: linen;
+    width: auto;
+    height: 75vh;
+    color: #F00;
+    text-align: center;
+}
+
+#header-user1::after {
+    content: "";
+    background-color: black;
+    height: 75vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.7;
+}
+
+#header-user1 * {
+    position: relative;
+    z-index: 1;
 }
 
 #imagen-user {
-    width: 5%;
+    width: 8%;
     border-radius: 50%;
     display: block;
     float: right;
@@ -102,32 +140,46 @@
     margin-right: 2%;
 }
 
-#header-user1 {
-    color: #8B0000;
-    text-align: center;
+#imagen-home {
+    width: 4%;
+    display: block;
+    float: right;
+    margin-top: 2%;
+    margin-right: 2%;
 }
 
 #title {
-    padding-top: 2%;
-    font-size: 350%;
+    padding-top: 5%;
+    font-size: 550%;
 }
 
 #subtitle {
-    font-size: 250%;
+    font-size: 270%;
 }
 
 #searchInput {
-    margin-left: 2%;
+    margin-top: 2%;
+    margin-left: 5%;
+    display: block;
+    float: left;
+}
+
+#searchButton {
+    margin-top: 2%;
+    display: block;
+    float: left;
+    border-radius: 10%;
 }
 
 #welcome {
+    padding-top: 3.5%;
     color: #FFF;
     text-align: center;
 }
 
 #catalogue-1 {
     color: #D3D3D3;
-    margin-top: 3%;
+    margin-top: 3.5%;
     margin-left: 5%;
 }
 
@@ -161,7 +213,50 @@
 }
 
 
-/*-------------------------------- F O O T E R ------------------------------------------*/
+/*----------------------------------------- F O O T E R - 0 -------------------------------------------------*/
+
+#footer-0 {
+    width: 100%;
+    background-color: #000;
+    background-size: cover;
+    position: fixed;
+    bottom: 0;
+    color: linen;
+    text-align: center;
+    display: block;
+    margin: auto;
+    font-size: 100%;
+    padding-top: 1%;
+    opacity: 70%;
+}
+
+.btn {
+    color: #f00;
+}
+
+
+/*----------------------------------------- F O O T E R - 1 -------------------------------------------------*/
+
+#social-0 {
+    width: 100%;
+    background: #000000;
+    background-size: cover;
+    position: fixed;
+    color: linen;
+    text-align: center;
+    display: block;
+    margin: auto;
+    font-size: 100%;
+    padding-top: 1%;
+    opacity: 70%;
+}
+
+.btn {
+    color: #f00;
+}
+
+
+/*-------------------------------------- F O O T E R - 2 ---------------------------------------------------*/
 
 footer {
     width: 100%;
@@ -177,12 +272,6 @@ footer {
     padding-top: 1%;
 }
 
-
-/*
-#social a i {
-    list-style-type: none;
-    justify-content: center;
-    font-size: 100%;
-    line-height: 135%;
-    margin-top: 1%;
-}*/
+.btn {
+    color: #8B0000;
+}
