@@ -1,6 +1,6 @@
 # MEXFLIX FOR CHILDREN
 
-**"Movie cathalogue to find the best children movie"**
+Movie cathalogue to find the best children movie
 
 ---
 
