@@ -4,7 +4,7 @@
     background-image: url(https://www.fimth.com/wp-content/uploads/VN-vi-20210222-popsignuptwoweeks-perspective_alpha_website_medium-1.jpg);
     background-color: #000;
     color: linen;
-    min-height: 100vh;
+    height: 100vh;
     width: auto;
 }
 
@@ -29,7 +29,7 @@
     display: block;
     margin: auto;
     width: 10%;
-    padding-top: 2.5%;
+    padding-top: 1%;
 }
 
 .form-group {
@@ -79,7 +79,8 @@
 }
 
 #imagen-acceso {
-    padding-top: 7%;
+    padding-top: 4%;
+    padding-bottom: 4%;
     width: 8%;
     border-radius: 50%;
     display: block;
@@ -161,7 +162,50 @@
 }
 
 
-/*-------------------------------- F O O T E R ------------------------------------------*/
+/*----------------------------------------- F O O T E R - 0 -------------------------------------------------*/
+
+#footer-0 {
+    width: 100%;
+    background-color: #000;
+    background-size: cover;
+    position: fixed;
+    bottom: 0;
+    color: linen;
+    text-align: center;
+    display: block;
+    margin: auto;
+    font-size: 100%;
+    padding-top: 1%;
+    opacity: 70%;
+}
+
+.btn {
+    color: #f00;
+}
+
+
+/*----------------------------------------- F O O T E R - 1 -------------------------------------------------*/
+
+#social-0 {
+    width: 100%;
+    background: #000000;
+    background-size: cover;
+    position: fixed;
+    color: linen;
+    text-align: center;
+    display: block;
+    margin: auto;
+    font-size: 100%;
+    padding-top: 1%;
+    opacity: 70%;
+}
+
+.btn {
+    color: #f00;
+}
+
+
+/*-------------------------------------- F O O T E R - 2 ---------------------------------------------------*/
 
 footer {
     width: 100%;
@@ -177,12 +221,6 @@ footer {
     padding-top: 1%;
 }
 
-
-/*
-#social a i {
-    list-style-type: none;
-    justify-content: center;
-    font-size: 100%;
-    line-height: 135%;
-    margin-top: 1%;
-}*/
+.btn {
+    color: #8B0000;
+}
