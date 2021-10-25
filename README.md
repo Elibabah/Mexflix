@@ -87,6 +87,30 @@ Se entrega el producto con una URL (deployado).
 
 ## **8. Producto final**
 
+Pantalla 1: usuario: o / contraseña: 1
+
+## ![Final](./assets/1.png)
+
+Pantalla 2: Portal de usuarios
+
+## ![Final](./assets/2.png)
+
+Pantalla 3: Usuario 1: child
+
+## ![Final](./assets/3.png)
+
+Catálogo Usuario 1
+
+## ![Final](./assets/4.png)
+
+Películas
+
+## ![Final](./assets/5.png)
+
+Fichas técnicas
+
+## ![Final](./assets/6.png)
+
 ---
 
 ## **9. Agile**
