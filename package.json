@@ -23,5 +23,8 @@
     "homepage": "https://github.com/Elibabah/Mexflix#readme",
     "dependencies": {
         "markdown-table": "^3.0.1"
+    },
+    "devDependencies": {
+        "eslint": "^8.0.1"
     }
 }
