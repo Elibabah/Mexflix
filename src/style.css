@@ -76,12 +76,20 @@
 
 #header-user {
     text-align: center;
-    padding-top: 8%;
+    padding-top: 6%;
+}
+
+#title-1 {
+    font-size: 550%;
+}
+
+#subtitle-1 {
+    font-size: 260%;
 }
 
 #imagen-acceso {
     padding-top: 4%;
-    padding-bottom: 4%;
+    padding-bottom: 3%;
     width: 8%;
     border-radius: 50%;
     display: block;
@@ -126,6 +134,14 @@ main {
 #imagen-user {
     width: 8%;
     border-radius: 50%;
+    display: block;
+    float: right;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+
+#imagen-home {
+    width: 4%;
     display: block;
     float: right;
     margin-top: 2%;

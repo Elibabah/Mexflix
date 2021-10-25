@@ -44,3 +44,24 @@ let searchMovie = () => {
 //Traer botón del HTML por ID para darle función
 let buttonSearch = document.getElementById("searchButton")
 buttonSearch.addEventListener("click", searchMovie) //Escuchador de evento para que al click se enlace a función
+
+// ----------------------------------- Salida de la cuenta ------------------------------------//
+
+
+let volverPantalla0 = document.getElementById("imagen-user")
+volverPantalla0.addEventListener("click", function() {
+    document.getElementById("screen0").hidden = false // Ocultar pantalla 0
+    document.getElementById("screen1").hidden = true // Ocultar pantalla 1
+    document.getElementById("screen2").hidden = true // Mostrar pantalla 2
+})
+
+
+// ----------------------------------- Volver a página de usuarios ------------------------------------//
+
+
+let volverPantalla1 = document.getElementById("imagen-home")
+volverPantalla1.addEventListener("click", function() {
+    document.getElementById("screen0").hidden = true // Ocultar pantalla 0
+    document.getElementById("screen1").hidden = false // Ocultar pantalla 1
+    document.getElementById("screen2").hidden = true // Mostrar pantalla 2
+})
